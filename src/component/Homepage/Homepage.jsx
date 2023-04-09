@@ -1,9 +1,10 @@
 import React from 'react';
+import Title from '../Title/Title';
 
 const Homepage = () => {
     return (
-        <div>
-            <h3>This is HomePage</h3>
+        <div className='mx-auto px-5'>
+         <Title></Title>
         </div>
     );
 };
