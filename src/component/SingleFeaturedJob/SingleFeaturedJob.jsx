@@ -23,7 +23,7 @@ const SingleFeaturedJob = ({featuredJob}) => {
                <p>{featuredJob.salary}</p>
                </div>
             </div>
-           <Link>
+           <Link to={`/jobDetails/${featuredJob.id}`}>
            <button className='bg-gradient-to-r from-violet-400 to-indigo-400 text-white p-3 rounded w-[70%] md:w-[20%]'>View Details</button>
            </Link>
         </div>
