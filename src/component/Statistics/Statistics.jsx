@@ -21,7 +21,9 @@ const data = [
 
 const Statistics = () => {
     return (
-        <div className='flex justify-center mx-3'>
+        <div>
+        <h1 className='my-8 text-center text-indigo-600 text-4xl font-bold'>Area Chart Of Assignment Marks</h1>
+            <div className='flex justify-center mx-3'>
              <AreaChart
       width={500}
       height={400}
@@ -39,6 +41,7 @@ const Statistics = () => {
       <Tooltip />
       <Area type="monotone" dataKey="value" stroke="#8884d8" fill="#8884d8" />
     </AreaChart>
+        </div>
         </div>
     );
 };
