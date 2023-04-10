@@ -16,13 +16,15 @@ const AppliedJobs = () => {
     }, [])
     const getIdFromLocalStorage = JSON.parse(localStorage.getItem("jobID"));
 
-    const appliedJobs = getIdFromLocalStorage?.map(id => allJobs?.filter(appliedJob => appliedJob?.id == id))
-
     const setRemoteJob = () => {
         const remoteJobs = appliedJobs?.filter(remoteJob => {return remoteJob[0].remote_or_onsite == 'Remote'})
-        // setAllJobs(remoteJobs[0])
-        // console.log(remoteJobs[0])
+        // setAllJobs(remoteJobs)
+        // console.log(remoteJobs)
     }
+
+    const appliedJobs = getIdFromLocalStorage?.map(id => allJobs?.filter(appliedJob => appliedJob?.id == id))
+
+    
 
     // console.log(appliedJobs)
 

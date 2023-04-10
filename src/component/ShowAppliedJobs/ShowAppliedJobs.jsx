@@ -1,5 +1,6 @@
 import React from 'react';
 import { CurrencyDollarIcon, MapPinIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 
 const ShowAppliedJobs = ({ appliedJob }) => {
     const singleJob = appliedJob[0]
@@ -34,7 +35,9 @@ const ShowAppliedJobs = ({ appliedJob }) => {
         </div>
 
         <div className='w-full md:w-[15%]'>
-        <button onClick={() => setDataInLocalStorage(singleJobDetails.id)} className='bg-gradient-to-r from-violet-400 to-indigo-400 text-white p-3 rounded w-full'>View Details</button>
+       <Link  to={`/jobDetails/${singleJob?.id}`}>
+       <button onClick={() => setDataInLocalStorage(singleJobDetails.id)} className='bg-gradient-to-r from-violet-400 to-indigo-400 text-white p-3 rounded w-full'>View Details</button>
+       </Link>
         </div>
         </div>
     );
