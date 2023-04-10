@@ -3,7 +3,6 @@ import { CurrencyDollarIcon , MapPinIcon} from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
 const SingleFeaturedJob = ({featuredJob}) => {
-    console.log(featuredJob)
     return (
         <div className='border border-gray-200 p-5 '>
             <img src={featuredJob.company_logo} alt="" className='mb-4 '/>
