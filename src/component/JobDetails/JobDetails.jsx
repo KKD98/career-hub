@@ -31,7 +31,7 @@ const JobDetails = () => {
         <img src="/public/All Images/Vector-1.png"  alt="" />
         <h1 className='text-4xl text-gray-800 font-bold text-center absolute top-[50%] left-[45%]'>Job Details</h1>
         </div>
-            <div className='flex flex-col md:flex-row justify-center'>
+            <div className='flex flex-col md:flex-row justify-center mb-8'>
                 <JobDetailsPart1 singleJobDetails={singleJobDetails}></JobDetailsPart1>
                 <JobDetailsPart2 singleJobDetails={singleJobDetails}></JobDetailsPart2>
             </div>
