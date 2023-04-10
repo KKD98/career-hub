@@ -5,11 +5,9 @@ import JobDetailsPart2 from '../JobDetailsPart2/JobDetailsPart2';
 
 const JobDetails = () => {
     const foundJob = useLoaderData();
-    console.log(foundJob);
 
     const [allJobDetails, setAllJobDetails] = useState([])
-    // console.log(allJobDetails)
-
+   
 
     useEffect(() => {
         async function fetchMyAPI() {
@@ -22,8 +20,7 @@ const JobDetails = () => {
     }, [])
 
     const singleJobDetails = allJobDetails?.find(jobDetail => { return jobDetail.id == foundJob.jobId })
-    console.log('Found', singleJobDetails)
-
+    
 
     return (
         <div>
