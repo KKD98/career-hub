@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 
 const JobDetailsPart2 = ({singleJobDetails}) => {
     return (
-        <div>
-             <div className='grid grid-cols-1 w-full md:w-[30%]  m-3'>
-           <div className='w-full mb-5 p-3 md:p-8 bg-blue-100 '>
+        <div className='w-full md:w-[40%]'>
+             <div className='grid grid-cols-1 px-3 m-3'>
+           <div className='w-full mb-5 p-3 md:p-8 bg-blue-100 rounded'>
             <h3 className='text-gray-900 font-bold text-4xl '>Job Details</h3>
             <hr className='my-5 border-b-2 border-gray-300' />
             <div className='flex gap-2 items-center mb-3'>
             <CurrencyDollarIcon className="h-6 w-6 text-indigo-400" />
-            <p className='text-gray-800 font-semibold text-2xl'>Salary: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails.salary} (Per Month)</span></p>
+            <p className='text-gray-800 font-semibold text-2xl'>Salary: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails?.salary} (Per Month)</span></p>
             </div>
 
             <div className='flex gap-2 items-center mb-6'>
             <CalendarDaysIcon className="h-6 w-6 text-indigo-400" />
-            <p className='text-gray-800 font-semibold text-2xl'>Job Title: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails.job_title}</span></p>
+            <p className='text-gray-800 font-semibold text-2xl'>Job Title: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails?.job_title}</span></p>
             </div>
 
             <h3 className='text-gray-900 font-bold text-4xl '>Contact Information</h3>
@@ -24,17 +24,17 @@ const JobDetailsPart2 = ({singleJobDetails}) => {
 
             <div className='flex gap-2 items-center mb-6'>
             <PhoneIcon className="h-6 w-6 text-indigo-400" />
-            <p className='text-gray-800 font-semibold text-2xl'>Phone: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails.phone}</span></p>
+            <p className='text-gray-800 font-semibold text-2xl'>Phone: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails?.phone}</span></p>
             </div>
 
             <div className='flex gap-2 items-center mb-6'>
             <EnvelopeIcon className="h-6 w-6 text-indigo-400" />
-            <p className='text-gray-800 font-semibold text-2xl'>Email: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails.email}</span></p>
+            <p className='text-gray-800 font-semibold text-2xl'>Email: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails?.email}</span></p>
             </div>
 
             <div className='flex gap-2 items-center mb-6'>
             <MapPinIcon className="h-6 w-6 text-indigo-400" />
-            <p className='text-gray-800 font-semibold text-2xl'>Address: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails.location}</span></p>
+            <p className='text-gray-800 font-semibold text-2xl'>Address: <span className='text-gray-600 font-medium text-xl'>{singleJobDetails?.location}</span></p>
             </div>             
            </div>
           

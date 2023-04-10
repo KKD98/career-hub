@@ -7,24 +7,34 @@ const JobDetails = () => {
     const foundJob = useLoaderData();
     console.log(foundJob);
 
-     const [allJobDetails , setAllJobDetails] = useState([])
-    console.log(allJobDetails)
+    const [allJobDetails, setAllJobDetails] = useState([])
+    // console.log(allJobDetails)
+
 
     useEffect(() => {
+        async function fetchMyAPI() {
+            let response = await fetch('/public/featured-jobs.json')
+            response = await response.json()
+            setAllJobDetails(response)
+        }
 
-        fetch('/public/featured-jobs.json')
-            .then(res => res.json())
-            .then(data => setAllJobDetails(data))
-    }, []);
+        fetchMyAPI()
+    }, [])
 
-    const singleJobDetails = allJobDetails?.find(jobDetail => {return jobDetail.id == foundJob.jobId})
-    console.log('Found' , singleJobDetails)
+    const singleJobDetails = allJobDetails?.find(jobDetail => { return jobDetail.id == foundJob.jobId })
+    console.log('Found', singleJobDetails)
 
 
     return (
-        <div className='flex flex-col md:flex-row'>
-           {/* <JobDetailsPart1 singleJobDetails={singleJobDetails}></JobDetailsPart1>
-          <JobDetailsPart2 singleJobDetails={singleJobDetails}></JobDetailsPart2> */}
+        <div>
+        <div className='relative mb-3'>
+        <img src="/public/All Images/Vector-1.png"  alt="" />
+        <h1 className='text-4xl text-gray-800 font-bold text-center absolute top-[50%] left-[45%]'>Job Details</h1>
+        </div>
+            <div className='flex flex-col md:flex-row justify-center'>
+                <JobDetailsPart1 singleJobDetails={singleJobDetails}></JobDetailsPart1>
+                <JobDetailsPart2 singleJobDetails={singleJobDetails}></JobDetailsPart2>
+            </div>
         </div>
     );
 };
