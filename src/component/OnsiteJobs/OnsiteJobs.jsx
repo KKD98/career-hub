@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import ShowAppliedJobs from '../ShowAppliedJobs/ShowAppliedJobs';
 import { Link } from 'react-router-dom';
+import ShowAppliedJobs from '../ShowAppliedJobs/ShowAppliedJobs';
 
 let jobs = [];
 
-const AppliedJobs = () => {
+const OnsiteJobs = () => {
 
     const [allJobs, setAllJobs] = useState([]);
     useEffect(() => {
@@ -13,12 +13,20 @@ const AppliedJobs = () => {
             response = await response.json()
             setAllJobs(response)
         }
+
         fetchMyAPI()
     }, [])
     const getIdFromLocalStorage = JSON.parse(localStorage.getItem("jobID"));
+
     let appliedJobs = getIdFromLocalStorage?.map(id => allJobs?.filter(appliedJob => appliedJob?.id == id));
     jobs = appliedJobs;
 
+    const setOnsiteJob = () => {
+        const remoteJobs = appliedJobs?.filter(remoteJob => { return remoteJob[0]?.remote_or_onsite == 'Onsite' })
+        jobs = remoteJobs;
+        return jobs;
+    }
+    setOnsiteJob()
     return (
         <div>
             <div className='relative mb-3'>
@@ -45,4 +53,4 @@ const AppliedJobs = () => {
     );
 };
 
-export default AppliedJobs;
+export default OnsiteJobs;

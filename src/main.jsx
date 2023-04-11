@@ -13,6 +13,8 @@ import Blogs from './component/Blogs/Blogs';
 import Homepage from './component/Homepage/Homepage';
 import JobDetails from './component/JobDetails/JobDetails';
 import ErrorPage from './component/ErrorPage/ErrorPage';
+import RemoteJobs from './component/RemoteJobs/RemoteJobs';
+import OnsiteJobs from './component/OnsiteJobs/OnsiteJobs';
 
 
 const router = createBrowserRouter([
@@ -41,6 +43,14 @@ const router = createBrowserRouter([
         path: "jobDetails/:jobId",
         element: <JobDetails></JobDetails>,
         loader: ({params}) => params
+      },
+      {
+        path: "remoteJobs",
+        element: <RemoteJobs></RemoteJobs>
+      },
+      {
+        path: "onsiteJobs",
+        element: <OnsiteJobs></OnsiteJobs>
       }
     ]
   },
