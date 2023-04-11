@@ -38,8 +38,8 @@ const RemoteJobs = () => {
                 <div className="dropdown">
                     <label tabIndex={0} className="btn m-1 bg-gradient-to-r from-violet-400 to-indigo-400 text-white p-3 rounded w-full border border-white">Filter By</label>
                     <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <Link to="/remoteJobs"><button onClick={() => setRemoteJob()} className='bg-indigo-400 text-white mb-4 p-2 rounded hover:bg-indigo-500'>Remote</button></Link>
-                        <Link to="/onsiteJobs"><button onClick={() => setOnsiteJob()} className='bg-indigo-400 text-white p-2 rounded hover:bg-indigo-500'>Onsite</button></Link>
+                        <Link to="/remoteJobs"><button className='bg-indigo-400 text-white mb-4 p-2 rounded hover:bg-indigo-500'>Remote</button></Link>
+                        <Link to="/onsiteJobs"><button className='bg-indigo-400 text-white p-2 rounded hover:bg-indigo-500'>Onsite</button></Link>
                     </ul>
                 </div>
             </div>
