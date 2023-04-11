@@ -1,25 +1,25 @@
 [
     {
         "jobId": 1,
-        "jobImg": "/public/accounts.png",
+        "jobImg": "accounts.png",
         "jobName": "Account & Finance",
        "availableJobs":"300 Jobs Available"
     },
     {
         "jobId": 2,
-        "jobImg": "/public/business.png",
+        "jobImg": "business.png",
         "jobName": "Creative Design",
        "availableJobs":"100+ Jobs Available"
     },
     {
         "jobId": 3,
-        "jobImg": "/public/chip.png",
+        "jobImg": "chip.png",
         "jobName": "Marketing & Sales",
        "availableJobs":"150 Jobs Available"
     },
     {
         "jobId": 4,
-        "jobImg": "/public/social-media.png",
+        "jobImg": "social-media.png",
         "jobName": "Engineering Job",
        "availableJobs":"224 Jobs Available"
     }

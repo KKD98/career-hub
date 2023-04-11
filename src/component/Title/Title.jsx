@@ -11,7 +11,7 @@ const Title = () => {
                 <button className='bg-gradient-to-r from-violet-400 to-indigo-400 text-white p-3 rounded w-[50%] md:w-[20%]'>Get Started</button>
             </div>
             <div>
-                <img src="/public/All Images/titleImage.png" alt="" className='h-full w-[70%] my-4 mx-auto' />
+                <img src="titleImage.png" alt="" className='h-full w-[70%] my-4 mx-auto' />
             </div>
         </div>
     );

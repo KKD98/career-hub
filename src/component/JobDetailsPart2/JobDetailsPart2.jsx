@@ -59,7 +59,7 @@ const JobDetailsPart2 = ({ singleJobDetails }) => {
                     </div>
                 </div>
 
-                <Link to="/applied-jobs">
+                <Link>
                     <button onClick={() => setDataInLocalStorage(singleJobDetails.id)} className='bg-gradient-to-r from-violet-400 to-indigo-400 text-white p-3 rounded w-full'>Apply Now</button>
                 </Link>
             </div>

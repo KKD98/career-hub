@@ -9,7 +9,7 @@ const OnsiteJobs = () => {
     const [allJobs, setAllJobs] = useState([]);
     useEffect(() => {
         async function fetchMyAPI() {
-            let response = await fetch('/public/featured-jobs.json')
+            let response = await fetch('/featured-jobs.json')
             response = await response.json()
             setAllJobs(response)
         }
@@ -30,7 +30,7 @@ const OnsiteJobs = () => {
     return (
         <div>
             <div className='relative mb-3'>
-                <img src="/public/All Images/Vector.png" alt="" />
+                <img src="/Vector.png" alt="" />
                 <h1 className='text-4xl text-gray-800 font-bold text-center absolute top-[50%] left-[45%]'>Job Details</h1>
             </div>
 
